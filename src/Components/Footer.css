@@ -1,0 +1,16 @@
+.divmain {
+   margin: 0px;
+   padding: 0px;
+   display: flex;
+   justify-content: center;
+   background-color: white;
+   margin-top: 450px;
+}
+
+.divmain-p {
+   background-color: rgb(246, 166, 16);
+   width: 100%;
+   text-align: center;
+   color: white;
+   padding: 10px 0;
+}

@@ -1,0 +1,117 @@
+.main{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 30px;
+}
+.main-p{
+   width: 500px;
+   border-radius: 5px;
+   box-shadow: 5px 5px 10px 0px rgb(246, 166, 16);;
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   align-items: center;
+}
+
+.main-p input{
+   padding: 5px;
+   width: 100%;
+   height: 50px;
+   border: none;
+   font-weight: bold;
+   font-size: 20px;
+}
+
+.main-p input:focus{
+   outline: none;
+   border: none;
+}
+
+.main-p textarea{
+   width: 100%;
+   padding: 5px;
+   border: none;
+   line-height: 25px;
+   resize: none;
+}
+
+.main-p textarea:focus{
+   outline: none;
+   border: none;
+}
+
+/* .main-p button{
+   height: 30px;
+   width: 30px;
+   border-radius: 50%;
+   border: none;
+   background-color: grey;
+   color:white;
+   font-size: 25px;
+   transition: 0.3s;
+}
+
+.main-p button:hover{
+   cursor: pointer;
+   
+   background-color: rgb(176, 176, 3);
+} */
+
+.main-p button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   padding: 0 10px;
+   color: white;
+   text-shadow: 2px 2px rgb(116, 116, 116);
+   text-transform: uppercase;
+   border: solid 2px black;
+   letter-spacing: 1px;
+   font-weight: 600;
+   font-size: 17px;
+   background-color: hsl(49deg 98% 60%);
+   border-radius: 50px;
+   position: relative;
+   overflow: hidden;
+   transition: all .5s ease;
+   margin-top: 20px;
+ }
+ 
+ .main-p button:active {
+   transform: scale(.9);
+   transition: all 100ms ease;
+ }
+ 
+ .main-p button svg {
+   transition: all .5s ease;
+   z-index: 2;
+ }
+ 
+ .play {
+   transition: all .5s ease;
+   transition-delay: 300ms;
+ }
+ 
+ .main-p button:hover svg {
+   transform: scale(3) translate(50%);
+ }
+ 
+ .now {
+   position: absolute;
+   left: 0;
+   transform: translateX(-100%);
+   transition: all .5s ease;
+   z-index: 2;
+ }
+ 
+ .main-p button:hover .now {
+   transform: translateX(10px);
+   transition-delay: 300ms;
+ }
+ 
+ .main-p button:hover .play {
+   transform: translateX(200%);
+   transition-delay: 300ms;
+ }
