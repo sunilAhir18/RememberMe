@@ -4,7 +4,7 @@ const CreateNote = (props) => {
   const [expand, setExpand] = useState(false);
 
   const [note, setNote] = useState({
-   
+
     title: "",                                            //   we need title and content (hme title aur  content dono likhenge to hme dono pane keliye hme oobject create krna pdegA useState me)             
     content: "",
   });
@@ -13,17 +13,18 @@ const CreateNote = (props) => {
     // const value=event.target.value;
     // const name= event.target.name;
     // object destructring 
-    const { name, value } = event.target;     
+    const { name, value } = event.target;
     setNote((prevData) => {
       return {
-         ...prevData,      //user kya likh rha  hai yha se pta lgega 
-        [name]: value  
+        ...prevData,      //user kya likh rha  hai yha se pta lgega 
+        [name]: value
 
       };
     })
     console.log(note);
   }
-  const addEvent = () => {
+  const addEvent = (e) => {
+    e.preventDefault();
     props.passNote(note);
     setNote({
       title: "",
@@ -40,7 +41,7 @@ const CreateNote = (props) => {
     <>
       <div className="main" onDoubleClick={backToNormal}>
         <form className="main-p">
-          <input type="text" name="title" value={note.title} onChange={InputEvent} placeholder="Title" /> 
+          <input type="text" name="title" value={note.title} onChange={InputEvent} placeholder="Title" />
           <textarea cols="" rows="4" name="content" value={note.content} onChange={InputEvent} placeholder="write a note.." onClick={expandIt}></textarea>
           {/* {expand ? <button onClick={addEvent}>+</button> : null} */}
 
